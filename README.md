@@ -1,66 +1,56 @@
 Covid Vision Project
 
-This project contains backend code for a simple FastAPI application related to COVID-19 vision analysis. It is structured so that you can run the API locally, test endpoints, and extend the project easily with new features or workflows.
+The Covid Vision Project is a small backend application built to explore how workflow-based systems can be designed for vision-related tasks.
+The main goal of this project is to demonstrate clean backend structure, simple processing pipelines, and organized code that can later be extended for image analysis or AI experiments.
 
-The goal of this repository is mainly learning and experimentation — understanding FastAPI, workflow logic, and building small backend systems.
+🌟 Project Overview
 
-🚀 How to Run the Project
-1. Clone the repository
-git clone https://github.com/DASA207/covid-vision-project.git
-cd covid-vision-project
+This project is designed with the idea of running steps in a sequence — something like a workflow or pipeline.
+Each step can process data, update the shared state, and pass results to the next step.
 
-2. Create a virtual environment (optional but recommended)
-python -m venv venv
+Although the name is related to “Covid Vision,” the focus here is more on:
 
+Understanding backend architecture
 
-Activate it:
+Organizing code into workflows and tools
 
-Windows
+Building maintainable components
 
-venv\Scripts\activate
+Keeping the project easy to modify and extend
 
+It serves as a foundation for anyone who wants to later add real image processing, deep learning models, or advanced pipelines.
 
-Mac / Linux
+🧩 Key Features
 
-source venv/bin/activate
+A simple, clear project structure
 
-3. Install requirements
-pip install -r requirements.txt
+Workflow engine that can run steps in order
 
-4. Start the FastAPI server
-uvicorn app.main:app --reload
+Modular design for adding new tools or functions
 
-
-The API will now be available at:
-
-http://127.0.0.1:8000
+Easy to expand into real computer-vision tasks
 
 
-You can view automatic documentation at:
+🚀 How the Project Works (Simple Explanation)
 
-http://127.0.0.1:8000/docs
+The backend follows a workflow-style approach:
 
-📁 Project Structure
-covid-vision-project/
-│
-├── app/
-│   ├── main.py          # FastAPI application
-│   ├── graph_engine.py  # Workflow/graph logic (if used)
-│   ├── models.py        # Data models
-│   ├── tool_registry.py # Tools used inside the workflow
-│   └── workflows/       # Example workflow logic
-│
-├── requirements.txt
-└── README.md
+A shared state is created
 
-✨ What You Can Do With This Project
+Each step (node) reads and updates the state
 
-Run a lightweight FastAPI backend
+The workflow moves to the next step
 
-Modify or add new workflows
+You can add loops or conditions if needed
 
-Add tools or functions in the tool registry
+This flow makes it easy to create pipelines like:
 
-Test API endpoints for learning backend concepts
+Image preprocessing
 
-Use this as a base for bigger ML or vision projects
+Quality checks
+
+Feature extraction
+
+Result generation
+
+Even though this project is minimal, the architecture supports real expansion.
